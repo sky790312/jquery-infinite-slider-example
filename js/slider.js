@@ -18,16 +18,16 @@ function slider (jQuery){
 	  timer = setInterval(function(){
 	  	slide("right");
 	  }, auto_slide_seconds);
+	  if(hover_pause == 1){
+		  $('.carousel-inner, .btn-prev, .btn-next').hover(function(){
+		    clearInterval(timer)
+		  },function(){
+		    timer = setInterval(function(){
+		    	slide("right");
+		    }, auto_slide_seconds);
+		  }); //when hovere and mouseout
+		} //check if hover pause is enabled
 	}
-	if(hover_pause == 1){
-	  $('.carousel-inner, .btn-prev, .btn-next').hover(function(){
-	    clearInterval(timer)
-	  },function(){
-	    timer = setInterval(function(){
-	    	slide("right");
-	    }, auto_slide_seconds);
-	  }); //when hovere and mouseout
-	} //check if hover pause is enabled
 
 	$('.carousel-inner li:first').before($('.carousel-inner li:last'));
 	//move he last list item before the first item. The purpose of this is if the user clicks to slide left he will be able to see the last item.
