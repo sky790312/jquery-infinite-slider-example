@@ -1,0 +1,64 @@
+#carousel{
+  background-color: #f5f5f5;
+  position: relative;
+  margin: 0 auto;
+  width: 1080px;
+  overflow: auto;
+}
+
+.carousel-in{
+  position: relative;
+  left: 50%;
+  width: 980px; /* important (this width = width of list item(including margin) * items shown */ 
+  margin-left: -490px;
+  overflow: hidden;  /* important (hide the items outside the div) */
+}
+
+.carousel-inner{
+  position: relative;
+  left: -245px; /* important (this should be negative number of list items width(including margin) */
+  margin: 0px;
+  padding: 0px;
+  width: 9999px; /* important */
+  overflow: auto;
+
+  li{
+    float: left; /* important for inline positioning of the list items */                                    
+    width: 225px;  /* fixed width, important */
+    padding: 0px;
+    margin: 10px;
+  }
+}
+
+.btn-prev{
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  margin-top: -18px;
+  width: 34px;
+  height: 33px;
+  cursor: pointer;
+  background-image: url('../images/btn_prev.png');
+
+  &:hover{
+    background-position: 34px 34px;
+  }
+}
+
+.btn-next{
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  margin-top: -18px;
+  width: 34px;
+  height: 33px;
+  cursor: pointer;
+  background-image: url('../images/btn_next.png');
+
+  &:hover{
+    background-position: 34px 34px;
+  }
+}
