@@ -34,7 +34,17 @@ function slider (jQuery){
 
 	$('.btn-prev').click(function(){slide("left");});
 	$('.btn-next').click(function(){slide("right");});
-
+/*
+	$('.btn-prev').click(function(){
+		if(!$('.carousel-inner').is(':animated'))
+			slide("left");
+	});
+	$('.btn-next').click(function(){
+		if(!$('.carousel-inner').is(':animated'))
+			slide("right");
+	});
+	// another prevent user click too fast method
+*/
 	function slide(direct){
 		if(processing)
 			return;
