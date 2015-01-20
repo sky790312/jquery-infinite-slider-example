@@ -4,10 +4,11 @@
   position: relative;
   margin: 0 auto;
   width: 1080px;
+  height: 300px;
   overflow: auto;
 }
 
-/* line 9, ../sass/slider.scss */
+/* line 10, ../sass/slider.scss */
 .carousel-in {
   position: relative;
   left: 50%;
@@ -16,9 +17,10 @@
   margin-left: -490px;
   overflow: hidden;
   /* important (hide the items outside the div) */
+  top: 20%;
 }
 
-/* line 17, ../sass/slider.scss */
+/* line 19, ../sass/slider.scss */
 .carousel-inner {
   position: relative;
   left: -245px;
@@ -29,17 +31,30 @@
   /* important */
   overflow: auto;
 }
-/* line 25, ../sass/slider.scss */
+/* line 27, ../sass/slider.scss */
 .carousel-inner li {
   float: left;
   /* important for inline positioning of the list items */
-  width: 225px;
+  width: 245px;
   /* fixed width, important */
   padding: 0px;
-  margin: 10px;
 }
 
-/* line 33, ../sass/slider.scss */
+/* line 34, ../sass/slider.scss */
+.template-default {
+  padding: 9px;
+  cursor: pointer;
+  overflow: auto;
+  border: 1px #f5f5f5 solid;
+}
+/* line 40, ../sass/slider.scss */
+.template-default:hover {
+  padding: 9px;
+  background-color: #f5f5f5;
+  border: 1px #ddd solid;
+}
+
+/* line 47, ../sass/slider.scss */
 .btn-prev {
   position: absolute;
   top: 50%;
@@ -51,12 +66,12 @@
   cursor: pointer;
   background-image: url("../images/btn_prev.png");
 }
-/* line 44, ../sass/slider.scss */
+/* line 58, ../sass/slider.scss */
 .btn-prev:hover {
   background-position: 34px 34px;
 }
 
-/* line 49, ../sass/slider.scss */
+/* line 63, ../sass/slider.scss */
 .btn-next {
   position: absolute;
   top: 50%;
@@ -69,7 +84,7 @@
   cursor: pointer;
   background-image: url("../images/btn_next.png");
 }
-/* line 61, ../sass/slider.scss */
+/* line 75, ../sass/slider.scss */
 .btn-next:hover {
   background-position: 34px 34px;
 }

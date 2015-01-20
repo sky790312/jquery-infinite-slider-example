@@ -3,6 +3,7 @@
   position: relative;
   margin: 0 auto;
   width: 1080px;
+  height: 300px;
   overflow: auto;
 }
 
@@ -12,6 +13,7 @@
   width: 980px; /* important (this width = width of list item(including margin) * items shown */ 
   margin-left: -490px;
   overflow: hidden;  /* important (hide the items outside the div) */
+  top: 20%;
 }
 
 .carousel-inner{
@@ -24,9 +26,21 @@
 
   li{
     float: left; /* important for inline positioning of the list items */                                    
-    width: 225px;  /* fixed width, important */
+    width: 245px;  /* fixed width, important */
     padding: 0px;
-    margin: 10px;
+  }
+}
+
+.template-default{
+  padding: 9px;
+  cursor: pointer;
+  overflow: auto;
+  border: 1px #f5f5f5 solid;
+
+  &:hover {
+    padding: 9px;
+    background-color: #f5f5f5;
+    border: 1px #ddd solid;
   }
 }
 

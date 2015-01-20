@@ -4,15 +4,12 @@
 
 function slider (jQuery){
 
-	var auto_slide = 1;
-	var hover_pause = 1;
+	var timer,
+			auto_slide = 1,
+			hover_pause = 1,
+			auto_slide_seconds = 4000,
+			animate_seconds = 420;
 	//( 1 - ON , 0 - OFF)
-
-	var auto_slide_seconds = 4000;
-	var animate_seconds = 300;
-
-	var processing; // prevent clicking too fast
-	var timer;
 
 	if(auto_slide == 1){
 	  timer = setInterval(function(){
@@ -49,11 +46,11 @@ function slider (jQuery){
 		if(processing)
 			return;
 		processing = true;
-		var item_width = $('.carousel-inner li').outerWidth() + 20;
-		var carousel_ul = $('.carousel-inner');
-		var first_ele = $('.carousel-inner li:first');
-		var last_ele = $('.carousel-inner li:last');
-		var left_indent;
+		var left_indent,
+				carousel_ul = $('.carousel-inner'),
+				item_width = $('.carousel-inner li').outerWidth() + 20,
+				first_ele = $('.carousel-inner li:first'),
+				last_ele = $('.carousel-inner li:last');
 
 	  if(direct == "left"){
 	  	left_indent = parseInt(carousel_ul.css('left')) + item_width;
